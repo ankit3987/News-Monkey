@@ -3,12 +3,14 @@ import "./App.css";
 import React from "react";
 import NavBar from "./component/NavBar";
 import News from "./component/News";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
   const pageSize = 5;
   return (
-    <BrowserRouter>
+    // <BrowserRouter basename="/News-Monkey">
+    <HashRouter basename="/News-Monkey">
       <div>
         <NavBar />
         <Routes>
@@ -110,7 +112,8 @@ const App = () => {
           ></Route>
         </Routes>
       </div>
-    </BrowserRouter>
+    {/* </BrowserRouter> */}
+    </HashRouter>
   );
 };
 export default App;
